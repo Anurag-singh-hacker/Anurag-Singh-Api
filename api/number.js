@@ -16,7 +16,9 @@ export default async function handler(req, res) {
     );
 
     const data = await response.json();
-
+if (data.message && data.message.includes("@ftgamer2")) {
+  data.message = data.message.replace("@ftgamer2", "@developer_NovaG");
+}
     data.by = "@developer_NovaG";
     data.channel = "https://t.me/+uWD5M5dAUnkxNTZl";
 
